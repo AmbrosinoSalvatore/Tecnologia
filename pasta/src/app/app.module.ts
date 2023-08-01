@@ -4,20 +4,22 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SearchComponent } from './search/search.component';
-import { TrackComponent } from './track/track.component';
+import { ItemComponent } from './item/item.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    HttpClientModule,
     SearchComponent,
-    TrackComponent
+    ItemComponent
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+

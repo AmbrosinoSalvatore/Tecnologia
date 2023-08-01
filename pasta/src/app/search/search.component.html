@@ -1,4 +1,12 @@
-<div>
-    <input [(ngModel)]="searchTerm" type="text" placeholder="Cerca...">
-    <button (click)="search()">Cerca</button>
+<p>
+    <input type="text" #newquery>
+    <button (click)="submit(newquery)">Search</button>
+  </p>
+  <div *ngFor="let pasta of results.products" class="card" style="width: 18rem;">
+    <img class="card-img-top" src="{{pasta.image_small_url}}" alt="Card image cap">
+    <div class="card-body">
+        <a [routerLink]="['/item', pasta._id]">
+            {{ pasta.abbreviated_product_name}}
+          </a>
+    </div>
   </div>

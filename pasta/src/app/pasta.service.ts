@@ -1,18 +1,22 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
-
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 @Injectable({
-  providedIn: 'root'
-})
-export class OpenFoodFactsService {
-  private apiUrl = ;
-
-  constructor(private http: HttpClient) { }
-
-  searchProduct(searchTerm: string): Observable<any> {
-    const url = 'https://world.openfoodfacts.org/cgi/search.pl?search_terms=${query}&page_size=2&json=true'
-
-    return this.http.get<any>(this.apiUrl, { params });
-  }
+    providedIn: 'root'
+  })
+  export class PasteService {
+    constructor(private http: HttpClient) { }
+    search(query: string) {
+        let url = `https://world.openfoodfacts.org/cgi/search.pl?search_terms=${query}&page_size=2&json=true`;
+       
+        let obsTracks = this.http.get(url);
+        return obsTracks;
+      }
+      searchProduct(id:string){
+        let url = `https://world.openfoodfacts.org/api/v0/product/${id}`;
+        
+        let obsTracks = this.http.get(url);
+        return obsTracks;
+      }
+        
+      
 }
