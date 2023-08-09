@@ -1,0 +1,5 @@
+<div *ngFor="let giocatori of results.data">
+    <a [routerLink]="['/giocatore', giocatori.id]">
+      {{ giocatori.last_name}}
+    </a>
+    </div>
