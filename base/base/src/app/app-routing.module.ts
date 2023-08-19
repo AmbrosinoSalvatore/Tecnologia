@@ -5,13 +5,9 @@ import { ItemPokemonComponent } from './item-pokemon/item-pokemon.component';
 
 const routes: Routes = [
   {
-    path:'search',
+    path:'',
     component:SearchPokemonComponent
     
-  },
-  {
-    path:'item',
-    component:ItemPokemonComponent
   }
 
 ];
