@@ -1,5 +1,6 @@
-<p>casellla postale di: {{nomePersona}}</p>
-<p>contenuto:{{lettere}}</p>
-<div *ngFor="let lettera of lettere">
-    <p [lettere]="lettera"></p>
-  </div>
+<div class="casella-posta">
+  <h3>{{ utente }}</h3>
+  <ul>
+    <li *ngFor="let lettera of lettere">{{ lettera }}</li>
+  </ul>
+</div>
