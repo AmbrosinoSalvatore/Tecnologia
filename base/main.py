@@ -21,7 +21,7 @@ def get_pokemon():
     id = request.args.get('id')
 
     # Esegue la richiesta HTTP GET alle API ed ottiene un JSON
-    pokemon = requests.get(f'{base_url}/pokemon/{id}').json()
+    pokemon = requests.get(f'{base_url}/{id}').json()
 
     # Risponde con un JSON
     return jsonify(pokemon)

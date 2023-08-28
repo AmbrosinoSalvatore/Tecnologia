@@ -1,0 +1,6 @@
+<h2>Lista dei tjpi</h2>
+<ul>
+  <li *ngFor="let type of types">
+    <a [routerLink]="['/lista-tipi', type.name]">{{ type.name }}</a>
+  </li>
+</ul>
